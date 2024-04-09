@@ -1,0 +1,101 @@
+/* reset margin, padding do trình duyệt tự thêm (cái viền vàng làm ảnh không được sát hai bên)*/
+/* !important ghi đè lên tất cả các thuộc tính có sẵn có thẻ body */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.red {
+    border: 1px solid red;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+/* banner có padding 20px là tạo khoảng cách từ viền tới ndung là 20px
+    vì banner là cha nên padding cho nó để red là thằng con bị thu nhỏ lại
+    margin là tạo khoảng cách bên ngoài phần tử
+    padding là tạo khoảng cách từ bên trong */
+.banner {
+    height: 500px;
+    background: url('./banner.jpg') center center no-repeat;
+    padding: 20px;
+
+    .about-sign-in {
+        height: 80px;
+        width: 100%;
+        text-align: right;
+
+        .about,
+        .sign-in {
+            margin-top: 20px;
+            padding: 7px 15px;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .sign-in {
+            margin-right: 60px;
+            margin-left: 25px;
+            border: 1px solid green;
+            border-radius: 20px;
+        }
+    }
+
+    .logo {
+        background: url('./hapoERP.png') center center no-repeat;
+        margin-top: 40px;
+        height: 100px;
+    }
+
+    .content-center {
+
+        .left,
+        .right,
+        .center {
+            width: 33%;
+            /* Ta chọn 33% nhưng chọn display inline thì nó vẫn không cách nhau 
+    Ta phải chọn inline-block để mấy phần tử con đi hết độ rộng của cha*/
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            height: 30px;
+            width: 30px;
+        }
+
+        span {
+            color: red;
+            font-size: 30px;
+            display: block;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin-top: 30px;
+
+        span {
+            display: block;
+            font-size: 20px;
+        }
+    }
+
+    .btn-start-now {
+        text-align: center;
+
+        button {
+            text-transform: uppercase;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: 1px solid green;
+            margin-top: 25px;
+            cursor: pointer;
+        }
+    }
+}
